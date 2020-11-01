@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+#question-section .questions-container, #question-section .questions-container .progress-container .progress-bar, #instructions .instructions-container, #options .options .option .choice-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#options .options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  text-align: center;
+}
+
+#nav-buttons .next, #nav-buttons .restart {
+  padding: 1rem 0;
+  text-align: center;
+  background: #222;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 1rem 5rem;
+  cursor: pointer;
+}
+
+#nav-buttons .next:hover, #nav-buttons .restart:hover {
+  background: #FF9E00;
+  color: #222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#question-section .questions-container {
+  padding: 3rem 0;
+}
+
+#question-section .questions-container .question {
+  font-size: 2rem;
+  padding: 1.5rem 0;
+}
+
+#question-section .questions-container .question-number {
+  margin: 3rem 0;
+}
+
+#question-section .questions-container .progress-container {
+  border-radius: 5px;
+  background: #E7E6E6;
+  height: 10px;
+  width: 400px;
+}
+
+#question-section .questions-container .progress-container .progress-bar {
+  align-items: flex-end;
+  background: #FF9E00;
+  height: 100%;
+  width: 0%;
+  border-radius: 5px;
+  transition: all .5s;
+}
+
+#question-section .questions-container .progress-container .progress-bar .end-point {
+  width: 3px;
+  height: 100%;
+  background: #222;
+}
+
+#instructions .instructions-container {
+  color: #222;
+  margin-bottom: 3rem;
+}
+
+#options .options .option {
+  list-style: none;
+}
+
+#options .options .option .choice-input {
+  opacity: 0;
+}
+
+#options .options .option .choice-input:checked + .choice-label {
+  color: #FF9E00;
+}
+
+#options .options .option .choice-input:checked + .choice-label .icon {
+  background-image: url("../images/circle-filled.svg");
+}
+
+#options .options .option .choice-label {
+  padding: 2rem 0;
+  background: #E7E6E6;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-direction: row;
+  justify-content: flex-start;
+  transition: all .5s;
+}
+
+#options .options .option .choice-label:hover {
+  background: #c7c7c7;
+}
+
+#options .options .option .choice-label .icon {
+  background-image: url("../images/circle-outline.svg");
+  background-size: 40px;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  position: relative;
+  top: 1px;
+  left: -2px;
+  margin: 0 10px;
+}
+
+#options .options .option .choice-label .answer-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#nav-buttons .next {
+  margin-top: 3rem;
+  transition: background-color .5s;
+}
+
+#nav-buttons .restart {
+  transition: background-color .5s;
+}
+/*# sourceMappingURL=style.css.map */
